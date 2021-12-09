@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  build-app-bitcoin:
+    image: ledger-app-builder:latest
+    container_name: build-app-bitcoin
+    volumes:
+      - ./:/app
+    working_dir: /app
+    environment:
+     - COIN=liquid_regtest_headless
+    command: /bin/bash -c "make"

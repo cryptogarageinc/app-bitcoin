@@ -227,6 +227,8 @@ endif
 # Default rule #
 ################
 all: default
+	$(info $$APPNAME is [${APPNAME}])
+	echo "APP_LOAD_PARAMS= ${APP_LOAD_PARAMS}"
 
 ############
 # Platform #
